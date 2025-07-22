@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import Image from "next/image";
 
 import { useState } from "react"
 import { usePathname } from "next/navigation"
@@ -32,7 +33,13 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
     <div className="flex h-full flex-col">
       {/* Logo */}
       <div className="flex h-16 shrink-0 items-center px-4">
-        <h1 className="text-xl font-bold">Monitoring Dashboard</h1>
+        <Image
+          src="/logo.png"
+          alt="Logo"
+          width={240}
+          height={40}
+          className="h-8 w-auto"
+        />
       </div>
 
       {/* Navigation */}
@@ -41,7 +48,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
           <li>
             <ul role="list" className="-mx-2 space-y-1">
               {filteredNavigation.map((item) => {
-                const isActive = pathname === item.href
+                const isActive = pathname === item.href;
                 return (
                   <li key={item.name}>
                     <Link
@@ -57,7 +64,7 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
                       {item.name}
                     </Link>
                   </li>
-                )
+                );
               })}
             </ul>
           </li>
@@ -71,17 +78,23 @@ export function DashboardLayout({ children }: { children: React.ReactNode }) {
             </div>
             <div className="flex-1">
               <p className="text-sm font-medium">{user?.name}</p>
-              <p className="text-xs text-muted-foreground capitalize">{user?.role}</p>
+              <p className="text-xs text-muted-foreground capitalize">
+                {user?.role}
+              </p>
             </div>
           </div>
-          <Button variant="ghost" className="w-full justify-start" onClick={handleLogout}>
+          <Button
+            variant="ghost"
+            className="w-full justify-start"
+            onClick={handleLogout}
+          >
             <LogOut className="mr-2 h-4 w-4" />
             Sign out
           </Button>
         </div>
       </nav>
     </div>
-  )
+  );
 
   return (
     <div className="flex h-screen">

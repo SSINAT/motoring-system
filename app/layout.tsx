@@ -8,9 +8,12 @@ import { Toaster } from "@/components/ui/toaster"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Monitoring Dashboard",
+  title: "Monitoring System",
   description: "Full-featured monitoring dashboard with alerts, logs, and metrics",
-    generator: 'v0.dev'
+  generator: 'v0.dev',
+     icons: {
+    icon: "/logo1.png", // Path to favicon or logo
+  },
 }
 
 export default function RootLayout({
