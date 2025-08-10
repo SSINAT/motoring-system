@@ -92,16 +92,16 @@ export default function RegisterPage() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="role">Role</Label>
+                {/* <Label htmlFor="role">Role</Label>
                 <Select value={role} onValueChange={(value: "admin" | "viewer") => setRole(value)}>
                   <SelectTrigger>
                     <SelectValue placeholder="Select a role" />
                   </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="viewer">Viewer</SelectItem>
-                    <SelectItem value="admin">Admin</SelectItem>
-                  </SelectContent>
-                </Select>
+                  <SelectContent> */}
+                  {/* <SelectItem value="viewer">Viewer</SelectItem> */}
+                    {/* <SelectItem value="admin">Admin</SelectItem> */}
+                  {/* </SelectContent> */}
+                {/* </Select> */}
               </div>
 
               {error && (

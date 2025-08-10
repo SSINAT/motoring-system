@@ -55,7 +55,7 @@ export default function DashboardPage() {
     <div className="space-y-6">
       <div>
         <h1 className="text-3xl font-bold tracking-tight">Dashboard</h1>
-        <p className="text-muted-foreground">Monitor your infrastructure metrics and system health</p>
+        {/* <p className="text-muted-foreground">Monitor your infrastructure metrics and system health</p> */}
       </div>
 
       {/* Metrics Cards */}
@@ -92,7 +92,7 @@ export default function DashboardPage() {
         <Card className="col-span-4">
           <CardHeader>
             <CardTitle>System Metrics</CardTitle>
-            <CardDescription>Real-time monitoring of system resources</CardDescription>
+            {/* <CardDescription>Real-time monitoring of system resources</CardDescription> */}
           </CardHeader>
           <CardContent className="pl-2">
             <MetricsChart metrics={metrics} />

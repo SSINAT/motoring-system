@@ -26,7 +26,7 @@ export function MetricCard({ title, value, unit, icon: Icon, color, isLoading }:
       </CardHeader>
       <CardContent>
         <div className="text-2xl font-bold">{isLoading ? "..." : `${value}${unit}`}</div>
-        <p className="text-xs text-muted-foreground">Real-time monitoring</p>
+       
       </CardContent>
     </Card>
   )
